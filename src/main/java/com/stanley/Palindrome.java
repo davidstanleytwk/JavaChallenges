@@ -27,22 +27,17 @@ public class Palindrome {
                     if(e-s==1)
                     {
                         r[s][e]=1;
-                        if(maxEnd-maxStart<e-s)
-                        {
-                            maxStart=s;
-                            maxEnd=e;
-                        }
 
                     }
                     else
                     {
                         r[s][e]=r[s+1][e-1];
-                        if(maxEnd-maxStart<e-s)
-                        {
-                            maxStart=s;
-                            maxEnd=e;
-                        }
 
+                    }
+                    if(maxEnd-maxStart<e-s)
+                    {
+                        maxStart=s;
+                        maxEnd=e;
                     }
                 }
                 else
