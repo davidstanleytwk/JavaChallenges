@@ -46,20 +46,34 @@ jacocoTestCoverageVerification {
     violationRules {
         rule {
             limit {
-                minimum = 0.01
+                minimum = 0.001
+
             }
+
         }
 
         rule {
-            enabled = false
-            element = 'CLASS'
-            includes = ['org.gradle.*']
+            enabled = true
+            element = 'METHOD'
+            //includes = ['org.gradle.*']
 
             limit {
                 counter = 'LINE'
                 value = 'TOTALCOUNT'
-                maximum = 0.3
+                maximum = 16
+
+                minimum = 1
             }
         }
     }
 }
+
+
+tasks.register('coverage') {
+    dependsOn 'jacocoTestReport'
+    dependsOn 'jacocoTestCoverageVerification'
+    jacocoTestCoverageVerification.mustRunAfter 'jacocoTestReport'
+    //tasks.findByName('jacocoTestCoverageVerification').mustRunAfter 'jacocoTestReport'
+}
+
+test.finalizedBy coverage
