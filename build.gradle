@@ -45,11 +45,12 @@ jacocoTestReport {
 jacocoTestCoverageVerification {
     violationRules {
         rule {
+            enabled = true
+
             limit {
-                minimum = 0.001
+                minimum = 0.8
 
             }
-
         }
 
         rule {
@@ -60,9 +61,7 @@ jacocoTestCoverageVerification {
             limit {
                 counter = 'LINE'
                 value = 'TOTALCOUNT'
-                maximum = 16
-
-                minimum = 1
+                maximum = 100
             }
         }
     }

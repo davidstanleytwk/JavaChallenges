@@ -12,44 +12,44 @@ class PalindromeTest {
 
         Palindrome p = new Palindrome();
 
-        //assertEquals("abba",p.longest("abba"));
-        assertEquals("abba","abba");
+        assertEquals("abba",p.longest("abba"));
+
     }
 
-//    @Test
-//    void simpleMiddlePali()
-//    {
-//
-//        Palindrome p = new Palindrome();
-//
-//        assertEquals("abba",p.longest("123abba456"));
-//    }
-//
-//    @Test
-//    void simpleStartPali()
-//    {
-//
-//        Palindrome p = new Palindrome();
-//
-//        assertEquals("abba",p.longest("abba123"));
-//    }
-//
-//    @Test
-//    void simpleEndPali()
-//    {
-//
-//        Palindrome p = new Palindrome();
-//
-//        assertEquals("abba",p.longest("123abba"));
-//    }
-//
-//    @Test
-//    void simpleMultiPali()
-//    {
-//
-//        Palindrome p = new Palindrome();
-//
-//        assertEquals("abba",p.longest("123dd456abba789"));
-//    }
+    @Test
+    void simpleMiddlePali()
+    {
+
+        Palindrome p = new Palindrome();
+
+        assertEquals("abba",p.longest("123abba456"));
+    }
+
+    @Test
+    void simpleStartPali()
+    {
+
+        Palindrome p = new Palindrome();
+
+        assertEquals("abba",p.longest("abba123"));
+    }
+
+    @Test
+    void simpleEndPali()
+    {
+
+        Palindrome p = new Palindrome();
+
+        assertEquals("abba",p.longest("123abba"));
+    }
+
+    @Test
+    void simpleMultiPali()
+    {
+
+        Palindrome p = new Palindrome();
+
+        assertEquals("abba",p.longest("123dd456abba789"));
+    }
 
 }

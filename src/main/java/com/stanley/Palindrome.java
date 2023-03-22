@@ -47,11 +47,7 @@ public class Palindrome {
             }
         }
 
-
         return p.substring(maxStart,maxEnd+1);
     }
-
-
-
 
 }
