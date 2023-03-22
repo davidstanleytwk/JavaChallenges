@@ -36,8 +36,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./gradlew build sonarqube --info
-        
+        run: ./gradlew build sonarqube --info  
       - name: Upload artifact for linux
         uses: actions/upload-artifact@v1.0.0
         with:
@@ -45,7 +44,3 @@ jobs:
           path: ./build/libs/JavaChallenges-1.0-SNAPSHOT.jar
           
           
-          
-  uploadArticats:
-    name: upload artifacts
-    runs-on: ubuntu-latest
